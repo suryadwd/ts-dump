@@ -141,22 +141,39 @@ function add(a: number, b: number): number {
 
 //class & objects
 
-class Car{
-  public names: String;
-  public prices: number;
-  public color: string;
-  constructor( name: string, price: number, color: string){
-    this.names = name
-    this.prices = price
-    this.color = color
-  }
+// class Car{
+//   public names: String;
+//   public prices: number;
+//   public color: string;
+//   constructor( name: string, price: number, color: string){
+//     this.names = name
+//     this.prices = price
+//     this.color = color
+//   }
 
+// }
+
+// let car1 = new Car('audi', 100000, 'red')
+// console.log(car1)
+
+// function show(a: number, cb: () => void){
+//   console.log(a)
+// }
+// cb() // this will call the function means cb takes a function and what it returns i had to write onn the right side and if it takes teh argumner i had to write on the left side
+
+// show(2, () => {
+//   console.log('hello')
+// })
+
+
+// function show1(a: number, cb: (v: number, k: number) => number){
+//   console.log(a)
+// }
+
+// show1(2, (a: number, b: number) => {return a + b})
+
+function abc<N>(a: N){
+  console.log(a)
 }
-
-let car1 = new Car('audi', 100000, 'red')
-console.log(car1)
-
-
-
-
-
+abc<number>(10)
+abc<string>('mohit')
