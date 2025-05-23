@@ -28,3 +28,11 @@
 // Tuples
 // const person: [string, number] = ['mohit', 21]  // we difine what type of data we are going to store in the array 
 
+// enum 
+
+enum UserRole {
+    ADMIN = 'admin',
+    USER = 'user'
+}
+
+UserRole.ADMIN // admin
