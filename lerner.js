@@ -4,11 +4,9 @@
 // a valid js code is always a valid ts code 
 // tsc -init to create a tsconfig.json file which a set of rules 
 // tsc --watch just like nodemon it will recomplie file when you make any changes in existing file
-
-a = 10
-b = 20
-
-a = a ^ b
-b = a ^ b
-a = a ^ b
-console.log(a, b) //
+a = 10;
+b = 20;
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;
+console.log(a, b);
