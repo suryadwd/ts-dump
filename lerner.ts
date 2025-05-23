@@ -24,3 +24,7 @@
 // primitive data types and reference data types
 
 // if we use [] {} () then we will say that they are references data types
+
+// Tuples
+// const person: [string, number] = ['mohit', 21]  // we difine what type of data we are going to store in the array 
+
