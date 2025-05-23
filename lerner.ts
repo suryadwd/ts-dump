@@ -30,9 +30,133 @@
 
 // enum 
 
-enum UserRole {
-    ADMIN = 'admin',
-    USER = 'user'
+// enum UserRole {
+//     ADMIN = 'admin',
+//     USER = 'user'
+// }
+
+// UserRole.ADMIN // admin
+
+// Values type decleration in typescript 
+
+//  -----> any, unknown, void, never, null, undefined
+
+// 1. any - it is a super type of all the data types in typescript
+
+// let a = 10     // number assign  
+// let c ;  // any assign (iska matlab ke type script of off kr do )
+
+// let a: unknown
+// a = 12
+// a = 'mohit'
+
+// a.toUpperCase() // it will give error because we are not sure what type of data is stored in a
+// if we want to use a as string then we have to do type assertion
+
+// if(typeof a === 'string') {
+//     console.log(a.toUpperCase()) // it will not give error
+// }
+
+// if a function is not returning anything then we can use void
+
+// function abcd(): void {          //as it is not returning anything just printing we will say it is void
+//     console.log('hello')
+// }
+
+// function cux(): number{          //as it is returning a number we will say it is number
+//   return 10
+// }
+
+// Inference
+// let a: number = 10                // we are telling ts that a is a number
+// let b = 20                       // ts will infer(automatically) get the type of b as number
+
+// Annotations
+// let c: number;                   // this is callled annotation
+// let a: number | string | boolean 
+
+// Interfaces
+
+// look at the senario now 
+
+// for understanding scenario we will take a function which is taking two numbers and returning a number
+function add(a: number, b: number): number {
+    // a.          we will get the function which are related to just number assume it as b as string we will get the function which are related to just string 
+    return a + b
 }
 
-UserRole.ADMIN // admin
+// function getUserInfo(obj){
+//   // obj.                // it will give no option because we are not sure what type of data is stored in obj
+// }
+
+// so we will create an interface which will define the structure of the object 
+
+
+// interface User{
+//   name: string,
+//   password: number,
+//   email: string
+//   gender?: string // ? means it is optional if you will pass/not pass this will calling function no probem 
+// }
+
+// function getUserInfo(obj: User){
+//   // obj.                // it will give optinon because we are sure what type of data is stored in obj
+//   }
+
+// while calling the function we will pass the object which is matching the interface as ts know now what things are available in the object 
+
+// getUserInfo({
+//   name: 'mohit',
+//   password: 1234,
+//   email: 'mohit@example.com'
+// });
+
+
+// interface User{
+//   name: string,
+//   password: number,
+//   email: string
+//   gender?: string // ? means it is optional if you will pass/not pass this will calling function no probem 
+// }
+
+// interface Admin extends User{
+//   admin: boolean
+// }
+
+// if type is user you will get all the properties of user and if you are using admin you will get all the properties of admin along with user properties
+
+// function getUserInfo(obj: Admin){
+//   obj              
+//   }
+
+
+// Type aliases
+
+// type sankya = number
+
+// let a: sankya = 10     this will show number 
+
+// let a: number | string    // this is caleed union type as ony one type of data will be passed at a time
+
+
+//class & objects
+
+class Car{
+  public names: String;
+  public prices: number;
+  public color: string;
+  constructor( name: string, price: number, color: string){
+    this.names = name
+    this.prices = price
+    this.color = color
+  }
+
+}
+
+let car1 = new Car('audi', 100000, 'red')
+console.log(car1)
+
+
+
+
+
